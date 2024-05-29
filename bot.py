@@ -43,9 +43,9 @@ class Bot(Client):
         temp.B_NAME = me.first_name
         username = '@' + me.username
         print(f"{me.first_name} is started now 🤗")
-        groups = await db.get_all_chats_count()
-        for grp in groups:
-            await save_group_settings(grp['id'], 'fsub', "")
+        #groups = await db.get_all_chats_count()
+        #for grp in groups:
+            #await save_group_settings(grp['id'], 'fsub', "")
         app = web.AppRunner(web_app)
         await app.setup()
         await web.TCPSite(app, "0.0.0.0", PORT).start()
